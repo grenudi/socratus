@@ -30,9 +30,9 @@ const run = function(token) {
         if(msg.first_name == "grenudi"){
             bot.sendMessage(msg.chat.id, "Слушаю, мастер");
         }
-        console.log("INCOMING MESSAGE: ", msg);
+        console.log("INCOMING MESSAGE from master: ", msg);
         const resp = match; // the captured "whatever"
-        console.log(resp, " LLLLL");
+        console.log(resp, " on master");
     })
 
     // Listen for any kind of message. There are different kinds of
