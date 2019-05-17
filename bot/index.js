@@ -24,13 +24,13 @@ const run = function(token) {
 
     // Listen for any kind of message. There are different kinds of
     // messages.
-    bot.on('message', (msg) => {
-        console.log("INPUT: ", msg);
-        const chatId = msg.chat.id;
+    // bot.on('message', (msg) => {
+    //     console.log("INPUT: ", msg);
+    //     const chatId = msg.chat.id;
 
-        // send a message to the chat acknowledging receipt of their message
-        bot.sendMessage(chatId, 'Received your message');
-    });
+    //     // send a message to the chat acknowledging receipt of their message
+    //     bot.sendMessage(chatId, 'Received your message');
+    // });
 }
 
 module.exports = {
