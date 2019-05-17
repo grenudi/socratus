@@ -27,7 +27,7 @@ const run = function(token) {
         // 'msg' is the received Message from Telegram
         // 'match' is the result of executing the regexp above on the text content
         // of the message
-        if(msg.first_name == "grenudi"){
+        if(msg.from.first_name === "grenudi"){
             bot.sendMessage(msg.chat.id, "Слушаю, мастер");
         }
         console.log("INCOMING MESSAGE from master: ", msg);
