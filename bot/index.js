@@ -15,6 +15,7 @@ const run = function(token) {
         // of the message
 
         const chatId = msg.chat.id;
+        console.log("INCOMING MESSAGE: ", msg);
         const resp = match[1]; // the captured "whatever"
 
         console.log(resp, " LLLLL");
