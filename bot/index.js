@@ -16,12 +16,24 @@ const run = function(token) {
 
         const chatId = msg.chat.id;
         console.log("INCOMING MESSAGE: ", msg);
-        const resp = match[1]; // the captured "whatever"
+        const resp = match; // the captured "whatever"
 
         console.log(resp, " LLLLL");
         // send back the matched "whatever" to the chat
         bot.sendMessage(chatId, "ДА");
     });
+
+    bot.onText(/эй, сократ/, (msg, match) => {
+        // 'msg' is the received Message from Telegram
+        // 'match' is the result of executing the regexp above on the text content
+        // of the message
+        if(msg.first_name == "grenudi"){
+            bot.sendMessage(msg.chat.id, "Слушаю, мастер");
+        }
+        console.log("INCOMING MESSAGE: ", msg);
+        const resp = match; // the captured "whatever"
+        console.log(resp, " LLLLL");
+    })
 
     // Listen for any kind of message. There are different kinds of
     // messages.
