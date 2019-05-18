@@ -42,6 +42,15 @@ const run = function(token) {
             bot.sendMessage(msg.chat.id, "Доебал, отебись!");
         }
     })
+    bot.onText(/надоело/, (msg, match) => {
+        // 'msg' is the received Message from Telegram
+        // 'match' is the result of executing the regexp above on the text content
+        // of the message
+        if(msg.from.first_name === "Rodion"){
+            bot.sendMessage(msg.chat.id, "Лох");
+            bot.sendMessage(msg.chat.id, "Пидр");
+        }
+    })
 
     // Listen for any kind of message. There are different kinds of
     // messages.
