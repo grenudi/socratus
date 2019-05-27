@@ -7,6 +7,7 @@ const run = async function(token) {
         webHook: {
             port:process.env.PORT,
             host:"socratus.herokuapp.com"
+            
         }
     });
     await bot.setWebHook('socratus.herokuapp.com', {
