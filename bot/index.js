@@ -1,9 +1,9 @@
-const run = function(token) {
+const run = async function(token) {
     console.log("TOKEN INJECTED: ",token);
     const TelegramBot = require('node-telegram-bot-api');
     // Create a bot that uses 'polling' to fetch new updates
     const bot = new TelegramBot(token, { polling: false });
-    bot.setWebHook('socratus.herokuapp.com', {
+    await bot.setWebHook('socratus.herokuapp.com', {
         certificate: '../crt.pem', // Path to your crt.pem
     });
 
