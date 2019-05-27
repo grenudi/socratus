@@ -1,12 +1,11 @@
 const run = function(token) {
     console.log("TOKEN INJECTED: ",token);
     const TelegramBot = require('node-telegram-bot-api');
-
-    // replace the value below with the Telegram token you receive from @BotFather
-
-
     // Create a bot that uses 'polling' to fetch new updates
-    const bot = new TelegramBot(token, { polling: true });
+    const bot = new TelegramBot(token, { polling: false });
+    bot.setWebHook('socratus.herokuapp.com', {
+        certificate: '../crt.pem', // Path to your crt.pem
+    });
 
     // Matches "/echo [whatever]"
     bot.onText(/сдох/, (msg, match) => {
